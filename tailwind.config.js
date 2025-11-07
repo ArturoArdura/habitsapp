@@ -4,7 +4,15 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'space': ['SpaceGrotesk-Regular'],
+        'space-light': ['SpaceGrotesk-Light'],
+        'space-medium': ['SpaceGrotesk-Medium'],
+        'space-semibold': ['SpaceGrotesk-SemiBold'],
+        'space-bold': ['SpaceGrotesk-Bold'],
+      },
+    },
   },
   plugins: [],
 }
