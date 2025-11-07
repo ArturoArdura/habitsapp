@@ -1,8 +1,10 @@
 import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
 import { Pressable, SafeAreaView, Text, TextInput, View } from 'react-native';
 import "../global.css";
 
 export default function Login() {
+    const router = useRouter();
   return (
     <LinearGradient 
       colors={['rgba(200, 255, 200, 0.3)', 'rgba(255, 255, 255, 0)', 'rgba(200, 255, 200, 0.4)']} 
@@ -47,7 +49,11 @@ export default function Login() {
           <Text className="text-green-600 font-semibold text-right">Forgot your password?</Text>
         </Pressable>
 
-        <Pressable className="bg-green-400 rounded-3xl p-4 w-full mt-4">
+        <Pressable className="bg-green-400 rounded-3xl p-4 w-full mt-4"
+        onPress={() => {
+            router.push('(tabs)');
+        }}
+        >
           <Text className="text-black font-bold text-center text-lg">Log In</Text>
         </Pressable>
 
