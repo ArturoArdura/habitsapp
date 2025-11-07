@@ -1,30 +1,65 @@
-import { Pressable, Text, TextInput, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Pressable, SafeAreaView, Text, TextInput, View } from 'react-native';
 import "../global.css";
 
 export default function Login() {
   return (
-    <View className="flex-1 items-center justify-center">
-      <Text>colHabits</Text>
-      <Pressable className="bg-white rounded-lg p-4 mt-4">
-        <Text>Login / Sign up</Text>
-        </Pressable>
-        <Text>Email</Text>
-        <TextInput placeholder='Enter your email'></TextInput>
-        <Text>Password</Text>
-        <TextInput placeholder='Enter your password'></TextInput>
-        <Text>Forgot your password?</Text>
+    <LinearGradient colors={['#FF6B6B', '#FFFFFF', '#FF6B6B']} style={{ flex: 1 }}>
+    <SafeAreaView className="flex-1 mx-4">
+      <View className="flex-1 justify-center gap-4 mx-4">
+        <Text className="text-4xl font-bold text-white text-center mb-4">colHabits</Text>
+        
+        <View className="bg-white/10 rounded-2xl p-1 flex-row mb-4">
+          <Pressable className="flex-1 bg-white rounded-2xl p-3">
+            <Text className="text-red-500 font-bold text-center">Login</Text>
+          </Pressable>
+          <Pressable className="flex-1 rounded-2xl p-3">
+            <Text className="text-white font-bold text-center">Sign up</Text>
+          </Pressable>
+        </View>
 
-        <Pressable className="bg-white rounded-lg p-4 mt-4">
-        <Text>Log In</Text>
+        <View className="gap-2">
+          <Text className="text-white font-semibold">Email</Text>
+          <TextInput 
+            placeholder='Enter your email' 
+            placeholderTextColor="#999"
+            className="bg-white rounded-xl p-4 text-black"
+          />
+        </View>
+
+        <View className="gap-2">
+          <Text className="text-white font-semibold">Password</Text>
+          <TextInput 
+            placeholder='Enter your password' 
+            placeholderTextColor="#999"
+            secureTextEntry
+            className="bg-white rounded-xl p-4 text-black"
+          />
+        </View>
+
+        <Pressable>
+          <Text className="text-green-300 font-semibold text-right">Forgot your password?</Text>
         </Pressable>
 
-        <Text>Or</Text>
-        <Pressable className="bg-white rounded-lg p-4 mt-4">
-        <Text>Continue with Google</Text>
+        <Pressable className="bg-green-600 rounded-2xl p-4 w-full mt-4">
+          <Text className="text-white font-bold text-center text-lg">Log In</Text>
         </Pressable>
-        <Pressable className="bg-white rounded-lg p-4 mt-4">
-        <Text>Continue with Apple</Text>
-        </Pressable>    
-    </View>
+
+        <View className="flex-row items-center gap-4 my-4">
+          <View className="flex-1 h-px bg-white/30" />
+          <Text className="text-white font-semibold">Or</Text>
+          <View className="flex-1 h-px bg-white/30" />
+        </View>
+
+        <Pressable className="bg-white rounded-2xl p-4 w-full flex-row items-center justify-center gap-2">
+          <Text className="text-red-500 font-bold text-center">Continue with Google</Text>
+        </Pressable>
+
+        <Pressable className="bg-black rounded-2xl p-4 w-full flex-row items-center justify-center gap-2">
+          <Text className="text-white font-bold text-center">Continue with Apple</Text>
+        </Pressable>
+      </View>
+    </SafeAreaView>
+    </LinearGradient>
   )
 }
