@@ -14,12 +14,12 @@ export default function Index() {
       <Text className="text-3xl font-semibold px-4 text-center">Build Better Habits, Together</Text>
       <Text className="text-gray-500 px-5 text-center font-semibold">Track your progress, conquer goals with your crew, and level up your life</Text>
       {/* multi screen component */}
-      <Pressable className="bg-green-600 rounded-2xl p-4 w-80"
+      <Pressable className="bg-green-400 rounded-2xl p-4 w-80"
         onPress={() => {
           router.push('/login');
         }}
       >
-        <Text className="text-white font-bold text-center text-lg">Get Started</Text>
+        <Text className="text-black font-bold text-center text-lg">Get Started</Text>
       </Pressable>
       <Text className="text-black font-semibold">Already have an account? <Text className="text-green-500 font-semibold">Log In</Text></Text>
 
