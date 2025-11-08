@@ -1,5 +1,9 @@
+import AntDesign from '@expo/vector-icons/AntDesign';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { Pressable, SafeAreaView, ScrollView, Text, View } from 'react-native';
+
 import "../../global.css";
 
 export default function HomeScreen() {
@@ -17,14 +21,26 @@ export default function HomeScreen() {
           
           {/* Stats Cards */}
           <View className="flex-row gap-4">
-            <View className="flex-1 bg-white rounded-2xl p-6 items-center shadow-sm">
-              <Text className="text-gray-600 font-semibold mb-2">Puntos</Text>
-              <Text className="text-4xl font-bold text-green-600">1,280</Text>
+            <View className="flex-1 flex-row bg-white rounded-2xl p-6 items-center shadow-sm">
+              <View className="rounded-full bg-green-100 w-10 h-10 items-center justify-center">
+                <FontAwesome name="diamond" size={24} color="green" />
+              </View>
+              <View className="ml-3 items-center justify-center">
+                <Text className="text-gray-600 font-semibold mb-2">Puntos</Text>
+                <Text className="text-4xl font-bold text-green-600">1,280</Text>
+              </View>
+              
             </View>
-            <View className="flex-1 bg-white rounded-2xl p-6 items-center shadow-sm">
-              <Text className="text-gray-600 font-semibold mb-2">Racha</Text>
-              <Text className="text-4xl font-bold text-green-600">15</Text>
-              <Text className="text-gray-500 text-sm">días</Text>
+            <View className="flex-1 flex-row bg-white rounded-2xl p-6 items-center shadow-sm">
+              <View className="rounded-full bg-green-100 w-10 h-10 items-center justify-center">
+                <AntDesign name="fire" size={24} color="green" />
+              </View>
+
+              <View className="ml-3 items-center justify-center">
+                <Text className="text-gray-600 font-semibold">Racha</Text>
+                <Text className="text-4xl font-bold text-green-600">15</Text>
+                <Text className="text-gray-500 text-sm">días</Text>
+              </View>
             </View>
           </View>
 
